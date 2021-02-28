@@ -71,7 +71,11 @@ add-executable (nom  pgm1.s)   s’il s’agit d’un programme assembleur seul.
 
 Il suffit ensuite de lancer le cmake (une fois si la configuration ne change pas) puis le nmake (autant de fois qu’il le faut!!).
 
-Pour commencer, nous allons repartir du programme C de clignotement de la led blink.c et nous allons nous contenter d’appeler les 4 procédures du C : gpio_init, gpio_set_dir, gpio_put et sleep_ms en passant soit comme paramétre dans le registre r0 le pin de la Led  25 soit la durée d’attente pour la routine sleep_ms.
+Pour commencer, nous écrivons une routine en assembleur programme : testPico1.s qui ajoute 5 au registre r0 puis qui le multiplie par 4. Puis cette routine est appelée dans le programme C copie du programme exemple hello_usb.c  dont nous modifions l'instruction print pour afficher le contenu retourné par la routine.
+
+Après quelques corrections et mises au point, le message s'affiche bien dans putty (sous windows) ou dans minicom. Je remarque que la manip n'est pas simple pour enfoncer la prise usb dans le raspberry (qui est léger) tout en appuyant sur le bouton de boot.
+
+Pour continuer notre découverte, nous allons repartir du programme C de clignotement de la led blink.c et nous allons nous contenter d’appeler les 4 procédures du C : gpio_init, gpio_set_dir, gpio_put et sleep_ms en passant soit comme paramétre dans le registre r0 le pin de la Led  25 soit la durée d’attente pour la routine sleep_ms.
 
 Lors de la première compilation, nous remarquons que nous devons mettre le suffixe s pour toutes les instructions arithmétiques (mov, add sub etc.) que le push ne concerne que les 7 registres les plus bas + lr et que le pop ne concerne aussi que 7 registres et le pc. 
 
