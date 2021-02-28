@@ -1,13 +1,22 @@
 # Préalables :
 Il faut avoir installer le sdk C++  soit sur un raspberry ( ici un modèle 3B+) soit sur Windows 10 en suivant scrupuleusement les indications du document :
 
-To build you will need to install some extra tools.
+To build you will need to install some extra tools. 
+
 • ARM GCC compiler
+
 • CMake
+
 • Build Tools for Visual Studio 2019
+
 • Python 3
+
 • Git
-Il faut faire bien attention à la mise à jour des chemins (PATH) puis il faut tester toute la chaîne de compilation avec l’exemple blink puis copier le fichier exécutable .UF2 sur le raspberry pico et vérifier le clignotement de la LED.
+
+Il faut faire bien attention à la mise à jour des chemins (PATH) 
+puis il faut tester toute la chaîne de compilation avec l’exemple blink 
+puis copier le fichier exécutable .UF2 sur le raspberry pico et vérifier le clignotement de la LED.
+
 Tant que cette étape n’est pas atteinte, il est inutile d’aller plus loin.
 Remarque : sous windows il faut lancer la première étape avec cmake -G "NMake Makefiles" .. depuis le répertoire build alors que sur Linux il suffit de lancer cmake ..
 Et pour la deuxième étape il faut taper nmake sous windows et make sous Linux.
