@@ -71,11 +71,13 @@ add-executable (nom  pgm1.s)   s’il s’agit d’un programme assembleur seul.
 
 Il suffit ensuite de lancer le cmake (une fois si la configuration ne change pas) puis le nmake (autant de fois qu’il le faut!!).
 
-Pour commencer, nous écrivons une routine en assembleur programme : testPico1.s qui ajoute 5 au registre r0 puis qui le multiplie par 4. Puis cette routine est appelée dans le programme C copie du programme exemple hello_usb.c  dont nous modifions l'instruction print pour afficher le contenu retourné par la routine.
+Pour commencer, nous écrivons une routine en assembleur programme : [testPico1.s](https://github.com/vincentARM/RaspberryPico/blob/main/Chapitre001/P1/testPico1.s) qui ajoute 5 au registre r0 puis qui le multiplie par 4. Puis cette routine est appelée dans le programme C copie du programme exemple hello_usb.c  dont nous modifions l'instruction print pour afficher le contenu retourné par la routine (voir les fichiers dans le répertoire P1).
 
 Après quelques corrections et mises au point, le message s'affiche bien dans putty (sous windows) ou dans minicom. Je remarque que la manip n'est pas simple pour enfoncer la prise usb dans le raspberry (qui est léger) tout en appuyant sur le bouton de boot.
 
 Pour continuer notre découverte, nous allons repartir du programme C de clignotement de la led blink.c et nous allons nous contenter d’appeler les 4 procédures du C : gpio_init, gpio_set_dir, gpio_put et sleep_ms en passant soit comme paramétre dans le registre r0 le pin de la Led  25 soit la durée d’attente pour la routine sleep_ms.
+
+(voir les fichiers dans le répertoire P1A).
 
 Lors de la première compilation, nous remarquons que nous devons mettre le suffixe s pour toutes les instructions arithmétiques (mov, add sub etc.) que le push ne concerne que les 7 registres les plus bas + lr et que le pop ne concerne aussi que 7 registres et le pc. 
 
@@ -85,11 +87,12 @@ Après recherche, je trouve sur le site raspberry.org l’explication : certain
 
 Pour résoudre cela, un post du site en question propose d’écrire un programme C qui fait le lien entre notre programme assembleur et les routines des entêtes .h.
 
-Je teste cette solution qui fonctionne dans le programme testPico2.s et qui pourra servir pour d’autres cas. 
+Je teste cette solution qui fonctionne dans le programme testPico2.s et qui pourra servir pour d’autres cas. (voir les fichiers dans le répertoire P1B)
 
 Mais le mieux pour les fanas d’assembleur est de réécrire ces routines directement en assembleur y compris les routines disponibles dans les librairies comme init_gpio.
 
-C’est ce que fait le programme :             réécrit à partir de la documentation de la datasheet mais aussi à partir du fichier .dis précédent. 
+C’est ce que fait le programme :  testPico2C.s     réécrit à partir de la documentation de la datasheet mais aussi à partir du fichier .dis précédent. 
+(voir les fichiers dans le répertoire P1D).
 En effet la chaîne de compilation fournit l’image assembleur du fichier uf2 crée ainsi que le plan de chargement. Ce sont 2 mines de documentation qui nous permettent de comprendre l’organisation des programmes du Pico.
 Mais attention, la chaîne de compilation optimise grandement les routines C et la lecture du résultat n’est pas évidente !!
 
