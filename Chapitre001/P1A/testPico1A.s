@@ -2,6 +2,7 @@
 /*  */
 /* Clignotement de la led  */
 /* appel des routines de la librairie */ 
+/* ATTENTION : erreurs de compilation lire le texte */
 .syntax unified
 .cpu cortex-m0plus
 .thumb
