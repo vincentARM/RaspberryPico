@@ -1,26 +1,26 @@
 # Préalables :
-Il faut avoir installer le sdk C++  soit sur un raspberry ( ici un modèle 3B+) soit sur Windows 10 en suivant scrupuleusement les indications du document :
+Il faut avoir installer le sdk C++  soit sur un raspberry ( ici un modèle 3B+) soit sur Windows 10 en suivant scrupuleusement les indications du document raspberry-pi-pico-c-sdk.pdf :
 
-To build you will need to install some extra tools. 
+>To build you will need to install some extra tools. 
 
-• ARM GCC compiler
+>• ARM GCC compiler
 
-• CMake
+>• CMake
 
-• Build Tools for Visual Studio 2019
+>• Build Tools for Visual Studio 2019
 
-• Python 3
+>• Python 3
 
-• Git
+>• Git
 
 Il faut faire bien attention à la mise à jour des chemins (PATH) 
 puis il faut tester toute la chaîne de compilation avec l’exemple blink 
 puis copier le fichier exécutable .UF2 sur le raspberry pico et vérifier le clignotement de la LED.
 
 Tant que cette étape n’est pas atteinte, il est inutile d’aller plus loin.
-Remarque : sous windows il faut lancer la première étape avec cmake -G "NMake Makefiles" .. depuis le répertoire build alors que sur Linux il suffit de lancer cmake ..
+Remarque : sous windows il faut lancer la première étape avec ** cmake -G "NMake Makefiles" .. ** depuis le répertoire build alors que sur Linux il suffit de lancer ** cmake .. **
 
-Et pour la deuxième étape il faut taper nmake sous windows et make sous Linux.
+Et pour la deuxième étape il faut taper ** nmake ** sous windows et ** make ** sous Linux.
 
 Il sera peut être nécessaire d’ajouter dans le fichier CMakeList.txt les directives suivantes :
 
@@ -32,7 +32,7 @@ project(nomduprojet)
 
 Car curieusement ces directives ne sont pas renseignées dans les exemples mais sont réclamées lors de la compilation.
 
-Il faut aussi tester l’utilisation du terminal (minicom sous linux) (putty sous windows) avec l ‘exemple hello-word. 
+Il faut aussi tester l’utilisation du terminal (minicom sous linux) (putty sous windows) avec l'exemple hello-word. 
 
 Sous windows, il faut brancher le pico sur le port usb avant de lancer putty avec le paramétrage série (115200).
 
@@ -52,13 +52,13 @@ Les instructions assembleur utilisées par le processeur font partie de cette ar
 
 Le source peut être saisi avec n’importe quel éditeur et doit être sauvé avec l’extension .s. Il faut préciser dans le source  ces  3 directives :
 
-.syntax unified
+.syntax unified  (Correction : n'est pas obligatoire )
 
 .thumb
 
 .cpu cortex-m0plus
 
-La directive .syntax permet d’avoir certains instructions avec le suffixe s qui positionne les indicateurs d’état.
+La directive .syntax oblige de mettre le suffixe s après les mnémoniques des instructions arithmètiques mais n'oblige pas le # .
 
 Comme vous l’avez constaté, les sources C sont incorporés dans le fichier Cmakelists.txt avec la directive :
  add-executable (nom pgm.c) 
