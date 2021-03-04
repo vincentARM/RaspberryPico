@@ -92,9 +92,30 @@ Je teste cette solution qui fonctionne dans le programme testPico2.s et qui pour
 Mais le mieux pour les fanas d’assembleur est de réécrire ces routines directement en assembleur y compris les routines disponibles dans les librairies comme init_gpio.
 
 C’est ce que fait le programme :  testPico2C.s     réécrit à partir de la documentation de la datasheet mais aussi à partir du fichier .dis précédent. 
-(voir les fichiers dans le répertoire P1D).
+(voir les fichiers dans le répertoire P1C).
 En effet la chaîne de compilation fournit l’image assembleur du fichier uf2 crée ainsi que le plan de chargement. Ce sont 2 mines de documentation qui nous permettent de comprendre l’organisation des programmes du Pico.
 Mais attention, la chaîne de compilation optimise grandement les routines C et la lecture du résultat n’est pas évidente !!
 
 Cette première démarche nous montre aussi que nous allons avoir souvent à décider si nous allons utiliser une routine déjà présente dans les librairies ou si nous allons la réécrire en assembleur.
 Nous constatons aussi que toutes les routines respectent la norme d'appel pour les paramètres : à savoir pas de sauvegarde des registres r0 à r3 donc il faudra faire attention lors de l'utilisation de ces registres.
+
+Quelques précisions sur ce programme :
+J’ai commencé à récupérer les constantes nécessaires dans les sources C fournis dans le SDK. Elles seront à compléter au fur et à mesure de leur utilité.
+
+J’ai crée une structure pour l’adresse des registres concernant les entrées sorties (SIO) lors de cette première écriture mais ce n’est pas une bonne idée !!
+
+Le nom de chaque routine doit être précédé de la directive : .thumb_func. Si vous mettez l’adresse de données à la fin du routine, il faut ajouter avant la directive .align 2. En effet les instructions thumb faisant 16 bits, l’adresse (.int) peut ne pas être alignée sur 4 octets.
+
+L’écriture des registres mémoire peut se faire de 4 manières différentes : 
+
+* normale  à l’adresse du registre
+
+* avec un xor de la valeur déjà présente si écriture à l’adresse + 0x1000
+
+* avec un masque à l’adresse + 0x2000 (atomic bitmask set on write)
+
+* avec un masque à l’adresse +0x3000 (atomic bitmask clear on write)
+
+Voir la datasheet rp2040.
+
+Enfin comme les instructions n’ont que 2 octets, les valeurs immédiates ne peuvent aller que jusqu’à 255 !! Non pas toujours : l’addition ou la soustraction d’une valeur immédiate à un registre depuis un autre ne peut être qu’inférieure à 8 !!!!
