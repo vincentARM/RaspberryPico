@@ -18,9 +18,9 @@ puis il faut tester toute la chaîne de compilation avec l’exemple blink
 puis copier le fichier exécutable .UF2 sur le raspberry pico et vérifier le clignotement de la LED.
 
 Tant que cette étape n’est pas atteinte, il est inutile d’aller plus loin.
-Remarque : sous windows il faut lancer la première étape avec ** cmake -G "NMake Makefiles" .. ** depuis le répertoire build alors que sur Linux il suffit de lancer ** cmake .. **
+Remarque : sous windows il faut lancer la première étape avec **cmake -G "NMake Makefiles" ..** depuis le répertoire build alors que sur Linux il suffit de lancer **cmake ..**
 
-Et pour la deuxième étape il faut taper ** nmake ** sous windows et ** make ** sous Linux.
+Et pour la deuxième étape il faut taper **nmake** sous windows et **make** sous Linux.
 
 Il sera peut être nécessaire d’ajouter dans le fichier CMakeList.txt les directives suivantes :
 
@@ -58,7 +58,7 @@ Le source peut être saisi avec n’importe quel éditeur et doit être sauvé a
 
 .cpu cortex-m0plus
 
-La directive .syntax oblige de mettre le suffixe s après les mnémoniques des instructions arithmètiques mais n'oblige pas le # .
+La directive .syntax oblige de mettre le suffixe s après les mnémoniques des instructions arithmètiques mais n'oblige pas le # avant lrs valeurs immédiates.
 
 Comme vous l’avez constaté, les sources C sont incorporés dans le fichier Cmakelists.txt avec la directive :
  add-executable (nom pgm.c) 
@@ -97,3 +97,4 @@ En effet la chaîne de compilation fournit l’image assembleur du fichier uf2 c
 Mais attention, la chaîne de compilation optimise grandement les routines C et la lecture du résultat n’est pas évidente !!
 
 Cette première démarche nous montre aussi que nous allons avoir souvent à décider si nous allons utiliser une routine déjà présente dans les librairies ou si nous allons la réécrire en assembleur.
+Nous constatons aussi que toutes les routines respectent la norme d'appel pour les paramètres : à savoir pas de sauvegarde des rgistres r0 à r3 donc il faudra faire attention lors de l'utilisation de ces registres.
