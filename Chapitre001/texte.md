@@ -97,4 +97,4 @@ En effet la chaîne de compilation fournit l’image assembleur du fichier uf2 c
 Mais attention, la chaîne de compilation optimise grandement les routines C et la lecture du résultat n’est pas évidente !!
 
 Cette première démarche nous montre aussi que nous allons avoir souvent à décider si nous allons utiliser une routine déjà présente dans les librairies ou si nous allons la réécrire en assembleur.
-Nous constatons aussi que toutes les routines respectent la norme d'appel pour les paramètres : à savoir pas de sauvegarde des rgistres r0 à r3 donc il faudra faire attention lors de l'utilisation de ces registres.
+Nous constatons aussi que toutes les routines respectent la norme d'appel pour les paramètres : à savoir pas de sauvegarde des registres r0 à r3 donc il faudra faire attention lors de l'utilisation de ces registres.
