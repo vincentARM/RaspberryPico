@@ -3,10 +3,8 @@ include(pico_sdk_import.cmake)
 project(testPico3)
 pico_sdk_init()
 add_executable(testPico3
-        mesFonctions.c
         testPico3.s
         )
-#pico_generate_pio_header(testPico2 ./testPico2.s)   ERREUR ERREUR
 # Pull in our pico_stdlib which aggregates commonly used features
 target_link_libraries(testPico3 pico_stdlib)
 
@@ -16,6 +14,3 @@ pico_enable_stdio_uart(testPico3 0)
 
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(testPico3)
-
-# add url via pico_set_program_url
-#example_auto_set_url(hello_usb)
