@@ -2,8 +2,7 @@
 /*  */
 /* test Clignotement LED en assembleur  */
 /* tout assembleur   y compris la fonction d'attente */ 
-/* A REVOIR EN COURS DE MODIFICATION */
-.syntax unified
+.syntax unified             @ non obligatoire
 .cpu cortex-m0plus
 .thumb
 /*********************************************/
