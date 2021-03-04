@@ -234,7 +234,6 @@ iAdrIoport:      .int IOPORT
 /*       boucle attente            */
 /***********************************/
 /* r0 valeur en milliseconde   */
-/* r1 value */
 .thumb_func
 attendre:
     lsls r0,#16             @ approximatif TODO: à verifier avec le timer
