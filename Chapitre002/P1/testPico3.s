@@ -22,7 +22,6 @@ szMessDebutPgm:      .asciz "Début du programme. \n"
 /*******************************************/ 
 .bss
 .align 4
-sBuffer:    .skip 500 
 
 /**********************************************/
 /* SECTION CODE                              */
@@ -42,7 +41,6 @@ main:
     bl attendre
  
     b 1b
-.thumb_func
 100:                            @ fin de programme standard  
     pop {r1,pc}                 @ restaur des  registres 
 .align 2
