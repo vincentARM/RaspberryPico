@@ -1,4 +1,5 @@
-#Chapitre 3 :  Boucle de commandes
+# Chapitre 3 :  Boucle de commandes
+
 Dans ce programme, nous allons voir la saisie et l’exécution d’une commande sur le terminal putty.
 
 Voir les fichiers du répertoire P1 de ce chapitre. 
