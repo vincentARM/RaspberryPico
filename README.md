@@ -10,4 +10,4 @@ Je conseille de lire en français la présentation et l'exellent manuel de mise 
 
 [Chapitre 2: Affichage de messages par la connexion USB](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre002)
 
-[Chapitre 2: Boucle de commandes : affichage d'un registre mémoire](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre003)
+[Chapitre 3: Boucle de commandes : affichage d'un registre mémoire](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre003)
