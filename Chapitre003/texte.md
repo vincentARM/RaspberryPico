@@ -51,30 +51,58 @@ Nous terminons en utilisant cette routine pour effectuer la réinitialisation du
 Voici un exemple d'exécution :
 
 >Début du programme.
+>
 >Entrez une commande :
+>
 >bin
+>
 >Adresse du registre en hexa ?:
+>
 >40060000
+>
 >Affichage binaire : 00000000 11111111 11111010 10100000
+>
 >Entrez une commande :
+>
 >aff
+>
 >Adresse du registre en hexa ?:
+>
 >40060000
+>
 >Valeur du registre : 40060000
+>
 >Valeur du registre : 00FFFAA0
+>
 >Entrez une commande :
+>
 >mem
+>
 >Adresse du registre en hexa ?:
+>
 >20000000
+>
 >Valeur du registre : 20000000
+>
 >Affichage mémoire  adresse : 20000000
+>
 >20000000 *00 20 04 20 13 01 00 10 C3 02 00 10 C5 02 00 10  . . ............
+>
 >20000010  C1 02 00 10 C1 02 00 10 C1 02 00 10 C1 02 00 10  ................
+>
 >20000020  C1 02 00 10 C1 02 00 10 C1 02 00 10 C7 02 00 10  ................
+>
 >20000030  C1 02 00 10 C1 02 00 10 C9 02 00 10 CB 02 00 10  ................
+>
 >Entrez une commande :
+>
 >fct
+>
 >ResultatFonction
+>
 >Valeur du registre : 00000001
+>
 >Entrez une commande :
+>
 >fin
+>
