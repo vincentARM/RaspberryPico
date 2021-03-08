@@ -24,12 +24,19 @@ Voici un exemple d’exécution pour afficher le registre ctrl du ring ocillator
 
 
 >Valeur du registre : 20042000     *(remarque : ceci est pour vérifier l’adresse de la pile)*
+>
 >Entrez une commande :
+>
 >aff
+>
 >Adresse du registre en hexa ?:
+>
 >40060000
+>
 >Valeur du registre : 40060000
+>
 >Valeur du registre : 00FAB000
+>
 >Entrez une commande :
 
 
