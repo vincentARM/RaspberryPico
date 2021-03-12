@@ -12,4 +12,4 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 
 [Chapitre 3: Boucle de commandes : affichage d'un registre mémoire](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre003)
 
-[Chapitre 4: appel de fonction de la rom](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre004)
+[Chapitre 4: appel de fonctions de la Rom](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre004)
