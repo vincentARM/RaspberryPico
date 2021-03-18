@@ -2,7 +2,7 @@
 
 Le pico possède un timer qui délivre un comptage toutes les microsecondes. Nous allons nous en servir pour mesurer le temps de l’attente d’une seconde de la procédure sleep_ms disponible dans la librairie standard.
 
-Voir les fichiers dans le répertoire P1.
+Voir les fichiers dans ce même répertoire.
 
 Nous commençons par lancer la routine testTimer pour activer le timer (registre tick commun avec le sous-système watchdog) et pour vérifier le contenu des registres donnant le temps (TIMELR et TIMEHR).
 
@@ -47,3 +47,4 @@ Temps = 32
 testCountOsc
 Temps = 10
 ```
+Remarque : les temps peuvent varier à chaque exécution car le Rosc n'est pas très stable d'après la documentation. J'ai essayé d'utiliser le cristal oscillateur mais je ne suis pas arrivé à le lancer correctement. 
