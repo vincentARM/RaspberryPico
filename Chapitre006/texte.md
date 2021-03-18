@@ -1,4 +1,4 @@
- # Chapitre 6 : Utilisation du timer, routines chrono
+ # Chapitre 6 : Utilisation du timer, routines chrono, mise en place watchdog
 
 Le pico possède un timer qui délivre un comptage toutes les microsecondes. Nous allons nous en servir pour mesurer le temps de l’attente d’une seconde de la procédure sleep_ms disponible dans la librairie standard.
 
