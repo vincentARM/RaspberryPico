@@ -15,3 +15,5 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 [Chapitre 4: appel de fonctions de la Rom](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre004)
 
 [Chapitre 5: mesure de la température avec le capteur interne](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre005)
+
+[Chapitre 6: utilisation du timer: routines chrono](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre006)
