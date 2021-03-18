@@ -13,7 +13,7 @@ Ensuite nous utilisons ces routines pour mesurer le temps à vide, le temps d’
 A vide, la mesure donne 3 microsecondes ce qui me paraît beaucoup car un décompte manuel des cycles donne 28  * 8 nano-secondes (durée d’un cycle à 125 mhz) = 224 nanosecondes !!!
 La mesure d’une seconde donne 1000003 microsecondes ce qui est conforme.
 
-La 3ième mesure donne pour le nombre maximun (127 car maxi siur 7 bits) donne 33 microsecondes donc 1 top compte pour 30/127 = 236 nanosecondes.
+La 3ième mesure donne pour le nombre maximun (127 car maxi sur 7 bits) 33 microsecondes donc 1 top compte pour 30/127 = 236 nanosecondes.
 
 Vérification en appelant la routine avec 42 ce qui donne un temps de 10 micro secondes environ.
 
