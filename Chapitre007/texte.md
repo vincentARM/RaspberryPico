@@ -5,15 +5,21 @@ Voir la carte de référence des instructions ici :   [carte référence](https
 Il s’agit d’un jeu d’instructions réduit :
 
 Une seule instruction de multiplication dont le résultat ne contient que dans un registre 32 bits. Il faudra donc écrire une multiplication qui donne le résultat sur 2 registres dans de nombreux calculs.
+
 Pas d’instruction de division entière. Il faut faire appel à une manipulation des registres mémoire (voir le paragraphe 2.3.1.5. Integer Divider de la datasheet)
 
 Pas d’instructions avec déplacement droite et gauche interne d’un registre. Donc pour la manipulation de tableaux il faut effectuer le calcul de l’offset avant la lecture ou l’écriture mémoire.
+
 Et bien sûr pas d’instructions sur les nombres à virgule flottante mais il est possible d’utiliser des routines disponibles dans la rom.
 
-La longueur des instructions étant de 16 bits, les valeurs immédiates sont limitées à 255 . Ce qui ne facilite pas le chargement d’un registre avec une valeur négative. Par exemple pour mettre -1 dans le registre r1, il faut mettre 0 d’abord puis soustraire 1 soit 2 instructions.
+La longueur des instructions étant de 16 bits, les valeurs immédiates sont limitées à 255.
+
+Ce qui ne facilite pas le chargement d’un registre avec une valeur négative. Par exemple pour mettre -1 dans le registre r1, il faut mettre 0 d’abord puis soustraire 1 soit 2 instructions.
+
 Pour d’autres valeurs, on peut utiliser l’instruction de déplacement puis une addition mais cela fait 3 instructions. Il est aussi possible d’utiliser une instruction ldr pour charger n’importe quelle constante (mais cela coûte 2 cycles).
 
 Limite identique pour additionner une valeur dans un registre mais pire pour l’addition d’une valeur immédiate à un registre avec un registre destinataire différent : la limite est 7 (3 bits) !!!
+
 Pareil pour la soustraction.
 
 Pour l’instruction adr rx,label, le label ne peut pas être éloigné de plus de 1020 octets.
