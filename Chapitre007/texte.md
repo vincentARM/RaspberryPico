@@ -33,6 +33,8 @@ Les opérations logiques (and, or, xor, not, tst ) ne peuvent se faire qu’entr
 
 Les instructions pop et push ne concerne que les 7 premiers registres + lr pour le push et cp pour le pop. Pour sauvegarder les autres, il faut d’abord sauvegarder les premiers puis mettre les seconds dans les premiers et sauvegarder puis recharger ceux qui contiennent les paramètres si nécessaire.
 
+Les registres r8 à r12 ne peuvent pas être utilisés pour toutes les opérations : ils ne peuvent pas servir pour l'adressage mémoire.
+
 Attention : si vous faites appel à des routines des librairies du SDK, ces routines ne sauvegardent pas les registres r0 à r3 et surtout pas le registre r12 !!!!!!
 
 Dans certains cas, il faut mettre une adresse de routine impaire (lors de l’appel à partir d’un registre par exemple).
