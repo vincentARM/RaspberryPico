@@ -19,3 +19,5 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 [Chapitre 6: utilisation du timer: routines chrono mise en place watchdog](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre006)
 
 [Chapitre 7: particularités de l"assembleur arm thumb du Pico](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre007)
+
+[Chapitre 8: utilisation du bouton pour allumer la Led](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre008)
