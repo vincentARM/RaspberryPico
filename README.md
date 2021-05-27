@@ -21,3 +21,5 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 [Chapitre 7: particularités de l"assembleur arm thumb du Pico](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre007)
 
 [Chapitre 8: utilisation du bouton pour allumer la Led](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre008)
+
+[Chapitre 9: utilisation du deuxième coeur du cortex M0](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre009)
