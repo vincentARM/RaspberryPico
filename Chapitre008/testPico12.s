@@ -289,7 +289,7 @@ iParPsm:                .int PSM_WDSEL_BITS & ~(PSM_WDSEL_ROSC_BITS |PSM_WDSEL_X
 boutonLed:                     @ INFO: boutonLed
     push {lr}
     afficherLib debutboutonled
-    ldr r6,iAdrPin25
+    ldr r6,iAdrPin25                @ init du GPIO
     movs r7,0xD             
     lsls r7,28                      @ calcul de l'adresse SIO_BASE
     movs r0, GPIO_FUNC_SIO
