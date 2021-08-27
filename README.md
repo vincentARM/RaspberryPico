@@ -23,3 +23,5 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 [Chapitre 8: utilisation du bouton pour allumer la Led](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre008)
 
 [Chapitre 9: utilisation du deuxième coeur du cortex M0](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre009)
+
+[Chapitre 10: programmation sans la stdlib du sdk](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre010)
