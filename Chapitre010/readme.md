@@ -16,7 +16,7 @@ Le programme commence par effectuer un reset général à l’exception de 4 sou
 
 Puis nous devons lancer un oscillateur et paramétrer une horloge minimum pour que l’allumage et l’extinction de la Led puisse s’effectuer.
 
-Ensuite nous initialisation la sortie pin25 correspondant à la LED. Vous remarquerez que ces initialisations sont fortement allégées par rapport à mes premiers programmes : merci à  pour leurs exemples de programmation.
+Ensuite nous initialisation la sortie pin25 correspondant à la LED. Vous remarquerez que ces initialisations sont fortement allégées par rapport à mes premiers programmes : merci à  Matthias Koch et Robert Clausecker pour leurs exemples de programmation.
 
 Ensuite le programme appelle les routines de clignotement de la LED fortement allégées et celle de la variation de la luminosité ?
 
