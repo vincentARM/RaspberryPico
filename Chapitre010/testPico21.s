@@ -1,6 +1,7 @@
 /* Programme assembleur ARM Raspberry pico */
 /* Clignonement LED et variation */
 /*  SANS UTILISATION DE LA STDLIB    */
+/* merci à  Matthias Koch et Robert Clausecker pour leurs exemples de programmation */
 .syntax unified
 .cpu cortex-m0plus
 .thumb
