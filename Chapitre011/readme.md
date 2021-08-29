@@ -38,6 +38,17 @@ Une liste de compilation sera aussi créée dans un fichier .list.
 Bravo si tout cela fonctionne du premier coup !!
 
 Remarque : la taille du ficher _deb.bin donne la taille exacte de l’exécutable ce qui peut être necessaire pour savoir de combien il faut optimiser le programme pour qu’il rentre dans les 252  octets.
+Exemple compilation
+```
+E:\Pico\Tools\"10 2020-q4-major"\bin\arm-none-eabi-as --warn --fatal-warnings -mcpu=cortex-m0  blinkA11.s -o blinkA11.o
+E:\Pico\Tools\"10 2020-q4-major"\bin\arm-none-eabi-ld  -T memmap.ld  blinkA11.o -o blinkA11.elf
+E:\Pico\Tools\"10 2020-q4-major"\bin\arm-none-eabi-objdump -D blinkA11.elf > blinkA11.list
+E:\Pico\Tools\"10 2020-q4-major"\bin\arm-none-eabi-objcopy -O binary blinkA11.elf blinkA11_dep.bin
+python pad_checksum_binary.py -p256 -s-1 blinkA11_dep.bin blinkA11.bin
+python uf2conv.py --family 0xE48BFF56 --base 0x10000000  blinkA11.bin -o blinkA11.uf2
+Converting to uf2, output size: 512, start address: 0x10000000
+Wrote 512 bytes to blinkA11.uf2
+```
 
 Voyons le programme blinkA11 qui se contente de faire clignoter la led et qui à une taille de 100 octets.
 
