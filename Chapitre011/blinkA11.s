@@ -57,7 +57,7 @@
 .thumb_func
 principal:
     adr r0,zConstantes
-    ldm  r0!, {r1-r5}               @ r1 RESETS_BASE + CLEAR
+    ldm  r0!, {r1-r4}               @ r1 RESETS_BASE + CLEAR
                                     @ r2 Paramètres
                                     @ r3 CLOCKS_BASE
                                     @ r4 GPIO_25_CTRL
