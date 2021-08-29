@@ -62,6 +62,6 @@ Le programme boucle indéfiniment sur cette routine.
 Vous remarquerez que les valeurs d’attente sont très différentes du programme précédent. En effet ici, il n’y aucun lancement d’horloge et donc le processeur tourne à la fréquence de l’oscillateur interne rosc à la fréquence de 6,5Mhz.
 
 
-Pour ceux qui veulent une liaison série avec un raspberry pi pour afficher des messages vous trouverez un exemple ici : 
+Pour ceux qui veulent une liaison série avec un raspberry pi pour afficher des messages vous trouverez un exemple ici : https://picocomp.belug.de/mandelboot.tar.gz
 
 Bon avec 252 caractères, il n’est pas possible de faire grand-chose et donc dans le chapitre suivant, nous verrons comment avoir des programmes plus importants.
