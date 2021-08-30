@@ -27,9 +27,9 @@ Et donc il suffit d’indiquer cette adresse au script de création du fichier u
 
 Voyons l’exemple du programme blinkA12.s  qui fait clignoter la led comme dans le programme précédent et qui fait aussi varier sa luminosité.
 
-Dans le répertoire de travail, nous trouvons le MakeFile, un fichier entete.bin qui contient les 256 premiers caractères, le fichier de directive pour le linker, le script python de création du fichier uf2 et le fichier source.
+Dans le répertoire de travail, nous trouvons le MakeFile, un fichier entete.bin qui contient les 256 premiers caractères, le fichier de directives pour le linker, le script python de création du fichier uf2 et le fichier source.
 
-Le lancement par make va compiler et linker le programme avec les outils standard puis va concaténer l’entête et le fichier binaire crée avec la simple instruction type !!!
+Le lancement par make va compiler et linker le programme avec les outils standards puis va concaténer l’entête et le fichier binaire crée avec la simple instruction type !!!
 Le .bin résultat est mis à l’entrée du script python : c’est tout simple.
 
 Voici un résultat de la compilation :
@@ -49,7 +49,7 @@ Wrote 1536 bytes to blinkA12.uf2
 ```
 
 Dans le programme blinckA12.s nous trouvons en premier la table des vecteurs d’interruption qui ne contient qu’un saut vers la routine reset puis des sauts vers une boucle sans fin pour tous les autres cas. Cette table semble être obligatoire et servira à initialiser le registre VTOR situé à l’adresse PPB_BASE + PPB_VTOR. 
-Pour plus d’explications complémentaires, vous pouvez recherche sur Internet les descriptions de cette table.
+Pour plus d’explications complémentaires, vous pouvez rechercher sur Internet les descriptions de cette table.
 
 Ensuite nous trouvons une routine d’initialisation qui effectue le reset général et une routine d’initialisation de l’oscillateur Cristal (XOSC) puis l’initialisation des registres d’horloge.
 
