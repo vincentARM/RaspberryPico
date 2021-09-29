@@ -26,3 +26,6 @@ Le script d’origine a été modifié pour pouvoir gérer cette communication. 
 Dès ce moment celui ci peut envoyer et recevoir des messages.
 
 Tout cela fonctionne correctement et bien sûr peut être grandement amélioré car les routines ne sont pas toujours bien écrites et optimisées. Cela permet d’effectuer des échanges avec la seule liaison USB et sans passer par le SDK.
+
+Normalement, les commentaires des routines doivent permettre leur compréhension. Vous pouvez aussi lire la partie USB de la datasheet et le contenu du programme exemple en C.
+Vous pouvez aussi consulter le site : https://www.usbmadesimple.co.uk/ums_4.htm  en anglais.
