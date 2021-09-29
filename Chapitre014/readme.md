@@ -15,3 +15,21 @@ Cette routine présente d’ailleurs de graves lacunes car les gestions des requ
 Il faudra donc dans putty créer les données d’une autre session série avec un taux de transmission de 9600 bauds à la place des 115200 de la session normale. 
 
 Pour le fonctionnement, voir les commentaires des routines.
+
+Exemple de connexion :
+```
+Début du programme.
+VerifAdressePile
+Valeur du registre : 20041EE8
+Tapez une commande :
+test
+Commande inconnue! tapez aide
+Tapez une commande :
+aide
+Liste des commandes disponibles :
+aide
+fin
+fct
+Tapez une commande :
+```
+
