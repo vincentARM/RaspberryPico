@@ -32,4 +32,4 @@ fin
 fct
 Tapez une commande :
 ```
-
+Remarque : la commande fin remet le pico en réception de stockage d'un programme uf2.
