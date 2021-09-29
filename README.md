@@ -31,3 +31,6 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 [Chapitre 12: programmation et compilation sans le sdk C++ (Partie 2)](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre012)
 
 [Chapitre 13: communication par le port USB sans le sdk C++](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre013)
+
+[Chapitre 14: implantation du protocole USB CDC sans le sdk C++](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre014)
+
