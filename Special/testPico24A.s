@@ -251,9 +251,6 @@ testerDoigts:                       @ INFO: testerDoigts
     movs r0,1
     bl attendre
     
-    ldr r1,iAdrPads
-    movs r2,1
-    str r2,[r1]
     ldr r1,iAdrPads16
     ldr r2,[r1]
     movs r0,0b1000100         @ pull_down et input
@@ -267,10 +264,10 @@ testerDoigts:                       @ INFO: testerDoigts
     ldr r1,iAdrSioBase
     ldr  r0, [r1, GPIO_IN]     @ input
     
-    //afficherLib lecture1
-    //push {r0}
-    //bl affRegHexa
-    //add sp,4
+    afficherLib lecture1
+    push {r0}
+    bl affRegHexa              @ affichage registre hexa
+    add sp,4
     
     movs r0,255
     lsls r0,4
@@ -290,7 +287,5 @@ testerDoigts:                       @ INFO: testerDoigts
 .align 2
 iAdrGPIO16:            .int GPIO_16_CTRL
 iAdrGPIO16ST:          .int GPIO_16_STATUS
-iAdrGPIO16INTR2:        .int SIO_BASE + 0x0f8 
-iAdrPads:             .int PADS_BANK0_BASE  @ TENSION
 iAdrPads16:             .int PADS_BANK0_BASE + 0x44  @ GPIO16
 iAdrSioBase:    .int SIO_BASE
