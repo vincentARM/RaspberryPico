@@ -22,9 +22,10 @@ Result :
 Valeur du registre : 20042000
 Entrez une commande :
 fct
-Entrez une commande :
-fct
+lecture1
+Valeur du registre : 01010000
 lecture2
 Valeur du registre : 01010000
 Entrez une commande :
+
 ```
