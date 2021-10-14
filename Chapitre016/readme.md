@@ -60,9 +60,8 @@ Nombre de cycles = 16
 Tapez une commande :
 ```
 Vérifions le nombre de cycle à vide :
-
-Pour terminer la routine débutSystick nous avons les instructions :
 ```
+Pour terminer la routine débutSystick nous avons les instructions :
 str r0,[r1]  soit 2 cycles
 bx lr           soit 3 cycles
 puis l’appel de la routine :
@@ -88,4 +87,4 @@ Nombre de cycles = 1033334
 ```
 C’est beaucoup mais il faut penser que nous avons le transfert des données sur le port USB.
 
-Sachant qu’un cycle à 125Mhz dure 8 nano secondes nous avons 1033334 = 8 266 672 nano secondes soit 8266 microsecondes ce qui correspond bien au temps donnée par le timer.
+Sachant qu’un cycle à 125Mhz dure 8 nano secondes nous avons 1033334 * 8 = 8 266 672 nano secondes soit 8266 microsecondes ce qui correspond bien au temps donnée par le timer.
