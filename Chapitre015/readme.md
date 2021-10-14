@@ -6,13 +6,19 @@ Mais en assembleur, nous n’avons pas la possibilité d’afficher le résultat
 
 En recherchant des informations complémentaires sur Grisu et Dragon4, je trouve un autre algorithme de Benoit Blanchon https://blog.benoitblanchon.fr/lightweight-float-to-string/  beaucoup plus simple.
 
-Dans le programme affFloatA.s vous trouverez cet algorithme avec quelques cas de tests. Il est a adapter en fonction des sorties que vous voulez avoir car il comporte quelques lacunes.
+Dans le programme affFloatA.s vous trouverez cet algorithme avec quelques cas de tests. Il est à adapter en fonction des sorties que vous voulez avoir car il comporte quelques lacunes.
 
 Par exemple, pour des valeurs inférieure à 1E7, il affiche  valeurE0  ce qui n’est pas terrible !!
 
 Et pour certaines valeurs qui ne peuvent être qu’approchées par la norme IEEE754, l’affichage n’est pas arrondi !!
 
 Enfin, il y a une erreur lors de la multiplication d’une valeur inférieure à 1E-37 par la valeur 1E38 qui donne 0 alors que ces 2 valeurs sont bien dans la limite des floats simple précision. Ceci entraîne que l’affichage est faux pour toute valeurs inférieure à 1E-37.
+
+Il faut installer dans un répertoire les fichiers et simplement tapez make pour lancer la compilation. 
+
+Ensuite transferer le fichier .uf2 sur le pico et ouvrir la communication par le port usb avec l'utilitaire Putty sur window et microcom sur Linux (port série en 9600 bauds). La led doit lancer 2 éclairs si la communication est OK.
+
+
 Voici un exemple des résultats :
  ```
 Tapez une commande :
