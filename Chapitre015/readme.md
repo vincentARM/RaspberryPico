@@ -19,7 +19,7 @@ Il faut installer dans un répertoire les fichiers et simplement tapez make pour
 Ensuite transferer le fichier .uf2 sur le pico et ouvrir la communication par le port usb avec l'utilitaire Putty sur window et microcom sur Linux (port série en 9600 bauds). La led doit lancer 2 éclairs si la communication est OK.
 
 
-Voici un exemple des résultats (la valeur du registre correspond à la longueur en hexa de la zone!!) :
+Voici un exemple des résultats (la valeur du registre correspond à la longueur en hexa de la zone affichée pour contrôle!!) :
  ```
 Tapez une commande :
 fct
