@@ -35,3 +35,5 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 [Chapitre 14: implantation du protocole USB CDC sans le sdk C++](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre014)
 
 [Chapitre 15: affichage de valeurs en virgule flottante (float 32 bits) sans le sdk C++](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre015)
+
+[Chapitre 15: affichage de la fréquence des horloges, calcul nombre de cycles](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre016)
