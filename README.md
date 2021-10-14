@@ -36,4 +36,4 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 
 [Chapitre 15: affichage de valeurs en virgule flottante (float 32 bits) sans le sdk C++](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre015)
 
-[Chapitre 15: affichage de la fréquence des horloges, calcul nombre de cycles](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre016)
+[Chapitre 16: affichage de la fréquence des horloges, calcul nombre de cycles](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre016)
