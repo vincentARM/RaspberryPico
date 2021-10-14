@@ -12,7 +12,7 @@ Par exemple, pour des valeurs inférieure à 1E7, il affiche  valeurE0  ce qui n
 
 Et pour certaines valeurs qui ne peuvent être qu’approchées par la norme IEEE754, l’affichage n’est pas arrondi !!
 
-Enfin, il y a une erreur lors de la multiplication d’une valeur inférieure à 1E-37 par la valeur 1E38 qui donne 0 alors que ces 2 valeurs sont bien dans la limite des floats simple précision. Ceci entraîne que l’affichage est faux pour toute valeurs inférieure à 1E-37.
+Enfin, il y a une erreur lors de la multiplication d’une valeur inférieure à 1E-37 par la valeur 1E32 qui donne 0 alors que ces 2 valeurs sont bien dans la limite des floats simple précision. Ceci entraîne que l’affichage est faux pour toute valeurs inférieure à 1E-37.
 
 Il faut installer dans un répertoire les fichiers et simplement tapez make pour lancer la compilation. 
 
