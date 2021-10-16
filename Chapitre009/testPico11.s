@@ -220,7 +220,7 @@ executionCore1:                     @ INFO: executionCore1
     afficherLib core1_debut
     movs r0,FLAG_VALUE              @ valeur à transmettre
     bl multicore_fifo_push_blocking @ envoi
-    bl multicore_fifo_pop_blocking  @ attente retour
+    //bl multicore_fifo_pop_blocking  @ attente retour
     afficherLib core1
 1:                                  @ boucle pour rester sur le coeur 1
     b 1b
