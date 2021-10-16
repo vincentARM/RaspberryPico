@@ -260,7 +260,7 @@ multicore_fifo_pop_blocking:          @ INFO: multicore_fifo_pop_blocking
     wfe
     ldr r3,[r1,SIOBASE_FIF0_ST]       @ registre status de la file fifo
     tst r3,r2
-    bne 2b
+    beq 2b                            @ correctif du 16/10/2021
 3:
     ldr r1,iAdrSioBase
     ldr r0,[r1,SIOBASE_FIF0_RD]       @ lecture fifo
