@@ -356,6 +356,8 @@ testerFloat:                       @ INFO: testerFloat
     bl tester1Float
     ldr r0,fValNormale
     bl tester1Float
+    ldr r0,fValTest5
+    bl tester1Float
 100:
     pop {r1-r4,pc}
 .align 2
@@ -366,6 +368,7 @@ fValTestInfP:       .int 0b01111111100000000000000000000000
 fValTestInfN:       .int 0b11111111100000000000000000000000
 fValTest3:          .float  1.2345E20
 fValTest4:          .float 10.123456
+fValTest5:          .float 10.00567           @ verif des 0 fractionnaires
 fValPlusPetite:     .float 1E-37
 fValPlusGrande:     .float 3.4E38
 fValPlusGrandeN:    .float -3.4E38
@@ -496,7 +499,7 @@ convertirFloat:               @ INFO: convertirFloat
  
     mov r0,r4                @ conversion partie fractionnaire
     mov r1,r6
-    bl conversion10
+    bl conversion10SP        @ car il faut conserver les 0 de tête
     add r6,r0
     subs r6,1
                              @ il faut supprimer les zéros finaux
@@ -705,3 +708,22 @@ iConstME7:            .float 0f1E-7
 iConstME3:            .float 0f1E-3
 iConstME1:            .float 0f1E-1
 iConstE0:             .float 0f1E0
+/******************************************************************/
+/*     Conversion d'un registre en décimal                         */ 
+/******************************************************************/
+/* r0 contient la valeur et r1 l' adresse de la zone de stockage   */
+/* modif 07/11/2021 pour garder les zéros de tête  */
+.equ LONZONE,   8
+conversion10SP:                @ INFO: conversion10SP
+    push {r1-r3,lr}            @ save des registres 
+    mov r2,r1
+    movs r3,#LONZONE
+1:                             @ debut de boucle de conversion
+    bl divisionpar10U          @ division par 10 r0 dividende et quotient, r1 reste
+    adds r1,#48                @ car c'est un chiffre  
+    strb r1,[r2,r3]            @ stockage du byte au debut zone (r5) + la position (r4)
+    subs r3,r3,#1              @ position précedente
+    bge 1b                     @ et boucle si >= zéro
+    movs r0,#LONZONE           @ retour longueur
+100:    
+    pop {r1-r3,pc}    
