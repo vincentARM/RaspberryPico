@@ -51,5 +51,8 @@ Valeur du registre : 0000000F
 -3,399999616E38
 Valeur du registre : 00000013
 +123456,703124992E0
+Valeur du registre : 0000000E
++10,00566959E0
 Tapez une commande :
 ```
+7 novembre 2021 : correction d'une erreur dans l'affichage de la partie fractionnaire.
