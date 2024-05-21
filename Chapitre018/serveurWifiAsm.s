@@ -1,12 +1,8 @@
 /* Programme assembleur ARM Raspberry pico */
-/*  gestion terminal  */
-/* commandes  afficher un registre memoire en binaire */
-/* afficher une zone mémoire */
-/* fct teste un serveur web wifi */
+/* Serveur web wifi pour le pico W */
 /* compiler avec le sdk C  pour insertion bibliotheque wifi et lwip */
 /* Init Ok : 2 eclats Led  Connexion Ok 5 eclats   */
 /* se connecter avec un navigateur IP 192.168.1.18 (à changer suivant l'IP de votre Pico)
-/* SI DIFFUSION ENLEVER LE SSID ET LE MOT DE PASSE */ 
 
 .syntax unified
 .cpu cortex-m0plus
