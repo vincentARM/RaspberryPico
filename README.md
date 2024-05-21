@@ -40,4 +40,4 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 
 [Chapitre 17: utilisation du core1 pour envoyer les messages](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre017)
 
-[Chapitre 18: picoW  serveur web connexion Wifi ] (https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre018)
+[Chapitre 18: picoW  serveur web connexion Wifi ](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre018)
