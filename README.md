@@ -42,5 +42,5 @@ Je conseille de lire en français la présentation et l'excellent manuel de mise
 
 [Chapitre 18: picoW  serveur web connexion Wifi ](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre018)
 
-[Chapitre 19; picoW ckient Telnet Wifi ](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre019)
+[Chapitre 19: picoW ckient Telnet Wifi ](https://github.com/vincentARM/RaspberryPico/tree/main/Chapitre019)
 
