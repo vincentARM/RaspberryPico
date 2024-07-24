@@ -16,6 +16,13 @@ Maintenant, tout va se jouer dans la fonction tcp_server_recv qui va analyser to
 
 Rien de bien compliqué et vous pouvez voir les instructions pour allumer et éteindre la led et retourner la température. Bien sûr cela est à compléter et à adapter à vos propres besoins.
 
+Compiler suus window avec la commande suivante :
+
+cmake -DPICO_BOARD=pico_w  -G "NMake Makefiles"  ..
+
+puis nmake
+
+
 Pour tester, il vous suffit de créer une connexion telnet par exemple dans putty avec l’adresse IP de votre pico, et le port 23. Le pico peut être totalement déconnecte du port usb de votre ordinateur puisque la connexion ne se fait qu’avec le Wifi.
 
 Voici un exemple de connexion :
