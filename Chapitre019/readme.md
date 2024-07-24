@@ -16,7 +16,7 @@ Maintenant, tout va se jouer dans la fonction tcp_server_recv qui va analyser to
 
 Rien de bien compliqué et vous pouvez voir les instructions pour allumer et éteindre la led et retourner la température. Bien sûr cela est à compléter et à adapter à vos propres besoins.
 
-Compiler suus window avec la commande suivante :
+Compiler sous window avec la commande suivante :
 
 cmake -DPICO_BOARD=pico_w  -G "NMake Makefiles"  ..
 
