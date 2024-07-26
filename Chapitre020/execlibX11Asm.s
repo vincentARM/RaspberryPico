@@ -254,6 +254,12 @@ testlibX11:                @ INFO: testlibX11
     bl XMapWindow           @ affichage de la fenetre
     
     mov r0,r4
+    movs r1,5                    @ nombre de police
+    movs r2,LGPATTERNFONT        @ taille pattern
+    ldr r3,iAdrszLibPatternFont
+    bl XListFont
+    
+    mov r0,r4
     movs r1,LGFONT1
     ldr r2,iAdrszLibFont1
     bl XOpenFont
@@ -304,11 +310,6 @@ testlibX11:                @ INFO: testlibX11
     mov r2,r7              @ window
     bl dessinerCercles
     
-    mov r0,r4
-    movs r1,5                    @ nombre de police
-    movs r2,LGPATTERNFONT        @ taille pattern
-    ldr r3,iAdrszLibPatternFont
-    bl XListFont
     
 5:                               @ loop sever event
     mov r0,r4

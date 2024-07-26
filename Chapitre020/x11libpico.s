@@ -346,6 +346,7 @@ tcp_client_recv:                       @ INFO:   tcp_client_recv
     bne 5f
     mov r0,r7
     adds r0,32
+    affmemtit Fonts r0 5
     movs r3,2
     str r3,[r4,tcp_status]
     b 8f
