@@ -1,4 +1,4 @@
-librairie légére pico client X11
+Librairie légére pico client X11
 
 Dans ce chapitre nous allons créer une petite librairie pour un client X11. Bien sûr toutes les fonctions de X11 ne seront pas développées mais nous verrons les principales pour créer une fenêtre, des boutons etc.  Il existe quelques petites différences avec les fonctions standard X11 dues au mode de fonctionnement de la libraire lwip et le mécanisme de tcp_ip.
 
