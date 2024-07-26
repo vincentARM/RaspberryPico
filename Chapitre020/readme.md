@@ -70,4 +70,4 @@ Fin fonction X11
 
 Entrez une commande ( ou help) :
 
-Et l’image de l’écran du serveur X11 (Xming sous windows11).
+![Et l’image de l’écran du serveur X11 (Xming sous windows11) ](https://github.com/vincentARM/RaspberryPico/blob/main/Chapitre020/ecranX11picoW.jpg.png)
